@@ -1,2 +1,3 @@
+.PHONY: node
 node:
-	docker build -t build-image .
+	docker build -t build-image node/
