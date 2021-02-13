@@ -1,3 +1,5 @@
 .PHONY: node
+node: TAG=docker.pkg.github.com/timestamp-app/build-node
 node:
-	docker build -t build-image node/
+	docker build -t ${TAG} node/
+	docker push ${TAG}
