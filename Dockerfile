@@ -10,3 +10,6 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /et
     && echo "deb [arch=amd64] https://packages.microsoft.com/debian/10/prod buster main" > /etc/apt/sources.list.d/dotnetdev.list \
     && apt-get -y update \
     && apt-get -y install azure-functions-core-tools-3
+
+# Azure Cli
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
